@@ -47,32 +47,38 @@ a:active {
 header {
     padding: .75rem 0;
     border-bottom: 2px solid var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .logo {
         margin: 0;
         font-size: 1.5rem;
         font-weight: 700;
     }
+}
 
-    nav {
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
+nav {
+    ul {
+        display: flex;
+        gap: .5rem;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
 
-        a {
-            display: block;
-            padding: .5rem .75rem;
-            text-decoration: none;
-            font-weight: 600;
-        }
+    a {
+        display: block;
+        padding: .5rem .75rem;
+        text-decoration: none;
+        font-weight: 600;
+    }
 
-        a:hover {
-            background-color: var(--light);
-        }
+    a:hover {
+        background-color: var(--light);
     }
 }
+
 
 .hero {
     background-color: var(--dark);
@@ -83,9 +89,9 @@ header {
     justify-content: center;
     align-items: center;
 
-    .card h1,
+    h1,
     p {
-        color: var(--background);
+        color: var(#ffffff);
         margin: 0, 0, .5rem;
     }
 }
@@ -93,30 +99,25 @@ header {
 .cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 1;
-
-    .card {
-        flex: 1 1 12rem;
-        display: flex;
-        flex-direction: column;
-
-        tag {
-            margin-top: auto;
-        }
-    }
+    gap: 1rem;
 }
 
-
 .card {
+    flex: 1 1 12rem;
+    display: flex;
+    flex-direction: column;
     padding: 1rem;
     background-color: var(--light);
     border: 1px solid var(--line);
 
-
+    a {
+        margin-top: auto;
+    }
 
     h3 {
         margin: 0;
     }
+
 }
 
 .feature {
@@ -126,6 +127,9 @@ header {
 
     img {
         width: 40%;
+        display: block;
+        max-width: 100%;
+        height: auto;
     }
 
     .words {
@@ -133,11 +137,7 @@ header {
     }
 }
 
-feature img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
+
 
 footer {
     border-top: 1px solid var(--line);
@@ -145,4 +145,5 @@ footer {
     font-size: .9rem;
     display: flex;
     justify-content: space-between;
+    
 }
